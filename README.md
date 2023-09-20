@@ -1,2 +1,2 @@
-# demo-python-fastapi-websocket
-FastAPI Websocket is a Python web framework that enables real-time communication between client and server using websockets, with high performance and easy-to-use API, ideal for building modern web applications.
+# demo-python-fastapi-background-task
+FastAPI BackgroundTask allows you to execute non-blocking tasks in the background while returning a response to the client quickly. It's ideal for tasks like sending emails, processing files, or updating caches.
