@@ -13,7 +13,7 @@ async def task_two():
     await asyncio.sleep(10)
     print("task_two success")
 
-@app.post("/start_tasks")
+@app.get("/start_tasks")
 async def start_tasks(background_tasks: BackgroundTasks):
     background_tasks.add_task(task_one)
     background_tasks.add_task(task_two)
