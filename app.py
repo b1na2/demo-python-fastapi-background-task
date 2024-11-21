@@ -13,13 +13,13 @@ async def task_two():
     await asyncio.sleep(10)
     print("task_two success")
 
-@app.get("/start_tasks")
+@app.get("/")
 def start_tasks(background_tasks: BackgroundTasks):
     background_tasks.add_task(task_one)
     background_tasks.add_task(task_two)
     return {"message": "Tasks started successfully!"}
 
-@app.get('/')
+@app.get('/start_tasks')
 def hello_world():
     return "Hello,World"
 
