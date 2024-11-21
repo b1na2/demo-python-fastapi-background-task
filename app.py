@@ -14,7 +14,7 @@ async def task_two():
     print("task_two success")
 
 @app.get("/start_tasks")
-async def start_tasks(background_tasks: BackgroundTasks):
+def start_tasks(background_tasks: BackgroundTasks):
     background_tasks.add_task(task_one)
     background_tasks.add_task(task_two)
     return {"message": "Tasks started successfully!"}
