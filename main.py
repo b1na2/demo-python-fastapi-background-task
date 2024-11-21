@@ -18,3 +18,11 @@ async def start_tasks(background_tasks: BackgroundTasks):
     background_tasks.add_task(task_one)
     background_tasks.add_task(task_two)
     return {"message": "Tasks started successfully!"}
+
+@app.get('/')
+def hello_world():
+    return "Hello,World"
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
